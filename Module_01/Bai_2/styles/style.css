@@ -1,7 +1,15 @@
 h1{
-    color: brown;
-    font-size: 20px;
-    font-style: italic;
+    font-size: 20px;    
     font-family: 'Times New Roman', Times, serif;
 
+}
+.demo{
+    font-style: italic;
+    color: blueviolet;
+}
+table, th, td {
+    border: 1px solid blue;
+  }
+.td-center{
+    text-align: center;
 }
