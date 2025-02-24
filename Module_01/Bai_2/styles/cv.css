@@ -88,8 +88,10 @@ body {
 }
 
 hr {
-    line-height: 20px;
+    height: 2px;
     margin-bottom: 5px;
+    color: #222;
+    background-color: #222;
 }
 table{
     margin-top: 0px;
