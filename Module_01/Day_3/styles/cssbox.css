@@ -1,0 +1,44 @@
+body {
+    width: 700px;
+    border: 1px;
+}
+.div_border{
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+
+.header {
+    box-sizing: border-box;
+    height: 100px;
+    margin: 10px;
+    padding: 5px;
+    /*border-style: solid;*/
+
+}
+
+.main_body {
+    height: 500px;
+    margin: 10px;
+    padding: 5px;
+
+}
+
+.bottom {
+    height: 200px;
+    margin: 10px;
+    padding: 5px;
+
+}
+
+.left_side {
+    width: 30%;
+}
+
+.right_side {
+    width: 70%;
+}
+}
+.content{
+    margin: 10px;
+    padding: 5px;
+}
