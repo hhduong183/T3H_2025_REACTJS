@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header,
+.footer {
+    /* display: flex; */
+    background-color: rgb(58, 58, 57);
+    height: 50px;
+    text-align: center;
+    color: #dee1eb;
+    padding: 15px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+}
+
+
+.side_bar {
+    width: 20%;
+    background-color: rgba(128, 128, 128, 0.324);
+    padding: 10px;
+
+
+}
+
+.main_content {
+    padding: 10px;
+
+}
