@@ -29,12 +29,13 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-right: 15px; /* Space between logo and brand text */
 }
 
 .header .brand-text {
     color: #dee1eb;
     font-size: 24px; /* Adjust the font size as needed */
+    align-content: center;
+
 }
 .container {
     flex: 1;
@@ -59,10 +60,10 @@ body {
     display: flex;
     flex-direction: row;
     /* justify-content: space-around; */
-    background-color: #dee1eb;
     padding: 10px;
     margin-left: auto;
     justify-content:right;
+    align-content: center;
 }
 .menu_item {
     padding: 5px;
@@ -71,4 +72,7 @@ body {
     background-color: #dee1eb;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100px; height: 40px;
+    cursor: pointer;
+    align-content: center;
 }
