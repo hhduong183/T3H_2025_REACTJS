@@ -1,7 +1,8 @@
 * {
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
+    max-width: 70vw;
 }
 
 header {
@@ -13,6 +14,7 @@ header {
 .brand-text {
     font-size: 1.5rem;
     font-weight: bold;
+    margin-left: 0;
 }
 
 body {
@@ -55,6 +57,7 @@ img {
     /* justify-content: space-around; */
     padding: 10px;
     margin-left: auto;
+    margin-right: 0;
     justify-content: right;
     align-content: center;
 }
