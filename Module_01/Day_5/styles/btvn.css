@@ -2,7 +2,6 @@
     margin: auto;
     padding: 0;
     box-sizing: border-box;
-    max-width: 70vw;
 }
 
 header {
@@ -20,27 +19,30 @@ header {
 body {
     font-family: Arial, sans-serif;
     background-color: #f1f1f1;
-    width: 100vw;
+    width: auto;
+    max-width: max-content;
+    margin: 5px;
 
 }
 
-div {
-    /* border: black 1px solid; */
+/* div {
+    border: black 1px solid;
     padding: 1px;
-}
-.card-img-top2{
+} */
+.card-img-top2 {
     width: 100%;
     max-height: 50%;
     object-fit: cover;
 }
-.container {
+
+/* .container {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     padding: 5px;
     width: 100vw;
-}
+} */
 
 img {
     /* aspect-ratio: 1920/1080; */
