@@ -1,0 +1,135 @@
+<form method="POST" action="export-contract.php">
+    <input type="hidden" name="nhanvien_id" id="nhanvien_id">
+    <div class="col-md-6">
+        <div style="margin-bottom: 15px;">
+            <label class="form-label">Mã nhân viên:</label>
+            <input type="text" id="ma_nhan_vien" name="ma_nhan_vien" class="form-control" required readonly>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label class="form-label">Họ tên:</label>
+            <input type="text" id="ho_ten" class="form-control" readonly>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label class="form-label">Ngày sinh:</label>
+            <input type="text" id="ngay_sinh" class="form-control" readonly>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label class="form-label">Số CMND:</label>
+            <input type="text" id="so_cmnd" class="form-control" readonly>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label class="form-label">Nơi ở hiện tại:</label>
+            <input type="text" id="ho_khau" class="form-control" readonly>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label class="form-label">Nguyên quán:</label>
+            <input type="text" id="nguyen_quan" class="form-control" readonly>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label class="form-label">Ngày cấp:</label>
+            <input type="text" id="ngay_cap" class="form-control" readonly>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label class="form-label">Nơi cấp:</label>
+            <input type="text" id="noi_cap" class="form-control" readonly>
+        </div>
+    </div>
+    <form method="POST" action="hopdong_save.php">
+        <div class="col-md-6">
+            <div style="margin-bottom: 15px;">
+                <label class="form-label">Mã hợp đồng:</label>
+                <input type="text" class="form-control" name="ma_hop_dong" required>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label class="form-label">Ngày bắt đầu:</label>
+                <input type="date" class="form-control" name="ngay_bat_dau" required>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label class="form-label">Ngày kết thúc:</label>
+                <input type="date" class="form-control" name="ngay_ket_thuc">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label>Loại hợp đồng:</label>
+                <select class="form-control" name="loai_hop_dong">
+                    <?php 
+            foreach ($arrLoaihopdong as $hd)
+            {
+              echo "<option value='".$hd['id']."' data-loaihopdong='".$hd['loaihopdong']."'>".$hd['ten_hop_dong']."</option>";
+            }
+          ?>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label class="form-label">Mức lương:</label>
+                <div class="row">
+                    <div class="col-md-5">
+                        <select class="form-control" name="BacLuong" id="BacLuong">
+                            <option value="">Bậc lương</option>
+                            <?php 
+                        foreach ($arrMucLuong as $ml) {
+                            echo "<option value='".$ml['id']."' data-mucluong='".$ml['muc_luong']."'>".$ml['bac_luong']."</option>";
+                        }
+                        ?>
+                        </select>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" name="MucLuong" id="MucLuong" readonly>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label class="form-label">Phụ cấp trách nhiệm:</label>
+                <div class="row">
+                    <div class="col-md-7">
+                        <select class="form-control" name="nhomTN" id="nhomTN">
+                            <option value="">Nhóm hưởng</option>
+                            <?php 
+                        foreach ($arrTrachnhiem as $tnh) {
+                            echo "<option value='".$tnh['id']."' data-trachnhiem='".$tnh['so_tien']."'>".$tnh['ten_nhom']."</option>";
+                        }
+                        ?>
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" name="Trachnhiem" id="Trachnhiem" readonly>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label class="form-label">Phụ cấp nghề:</label>
+                <div class="row">
+                    <div class="col-md-7">
+                        <select class="form-control" name="PCNNghe" id="PCNNghe">
+                            <option value="">Nghề nghiệp</option>
+                            <?php 
+                        foreach ($arrPhucapNghe as $ml) {
+                            echo "<option value='".$ml['id']."' data-PhucapNghe='".$ml['so_tien']."'>".$ml['ten_phu_cap']."</option>";
+                        }
+                        ?>
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" name="PhucapNghe" id="PhucapNghe" readonly>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-label">Phụ cấp nhà trọ:</label>
+                        <input type="text" class="form-control" name="nha_tro">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Phụ cấp đặc biệt:</label>
+                        <input type="text" class="form-control" name="dac_biet">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" name="save-contract" class="btn btn-success btn-submit"
+            style="margin: 25px;padding: 10px;"><a href="hopdong_save.php">Lưu & Tạo HĐ</a></button>
+    </form>
+    <button type="submit" name="add-contract" class="btn btn-primary btn-open-export btn-submit"
+        style="margin: 25px;padding: 10px;">Tạo hợp đồng nháp</button>
+</form>
